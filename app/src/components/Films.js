@@ -26,9 +26,9 @@ const Films = props => {
 const mapStateToProps = state => {
   console.log("fetching state", state);
   return {
-    films: state.films,
-    isFetching: state.isFetching,
-    error: state.error
+    films: state.filmsReducer.films,
+    isFetching: state.filmsReducer.isFetching,
+    error: state.filmsReducer.error
   }
 }; 
 
