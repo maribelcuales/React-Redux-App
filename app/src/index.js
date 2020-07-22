@@ -5,6 +5,8 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk'; 
 import './index.css';
 
+import rootReducer from './store/reducers'; 
+
 import App from './App';
 
 const store = createStore(rootReducer, applyMiddleware(thunk)); 
