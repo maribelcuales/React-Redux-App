@@ -18,6 +18,12 @@ export const filmsReducer = (state = initialState, action) => {
         films: action.payload,
         error: ""
       }; 
+    case "FETCH_FILM_FAILURE": 
+      return {
+        ...state,
+        isFetching: false,
+        error: action.payload
+      }
     default: 
       return state;
   }
