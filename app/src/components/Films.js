@@ -1,10 +1,38 @@
-import React from 'react'; 
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import Loader from 'react-loader-spinner'; 
 
-const Films = () => {
+import { fetchFilm } from '../store/actions/filmActions'; 
+
+const Films = props => {
+  useEffect(() => {
+    props.fetchFilm();
+  }, []);
   return (
-    <h2>Films</h2>
-
+    <div>
+      <h2>Films</h2>
+      {props.isFetching && (
+        <Loader
+        type="Puff"
+        color="#00BFFF"
+        height={100}
+        width={100}
+        />
+      )}
+    </div>
   );
 };
 
-export default Films; 
+const mapStateToProps = state => {
+  console.log("fetching state", state);
+  return {
+    films: state.films,
+    isFetching: state.isFetching,
+    error: state.error
+  }
+}; 
+
+export default connect(
+  mapStateToProps,
+  { fetchFilm }
+)(Films); 
