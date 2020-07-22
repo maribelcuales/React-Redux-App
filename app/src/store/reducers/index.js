@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { filmsReducer } from './components/filmsReducer'; 
+import { filmsReducer } from './filmsReducer'; 
 
 export default combineReducers({
   filmsReducer
