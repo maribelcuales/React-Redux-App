@@ -15,7 +15,8 @@ export const filmsReducer = (state = initialState, action) => {
       return {
         ...state,
         isFetching: false,
-        films: [...state.films, action.payload],
+        // films: [...state.films, action.payload],
+        films: [action.payload], 
         error: ""
       }; 
     case "FETCH_FILM_FAILURE": 
