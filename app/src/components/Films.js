@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner'; 
+import { Container, Row } from "reactstrap";
 
 import { fetchFilm } from '../store/actions/filmActions'; 
-import Film from './Film.js'; 
+import FilmCard from './FilmCard.js'; 
+import './styles.css';
 
 const Films = props => {
   useEffect(() => {
@@ -13,7 +15,6 @@ const Films = props => {
 
   return (
     <div>
-      <h2>Films</h2>
       {props.isFetching && (
         <Loader
         type="Puff"
@@ -25,7 +26,9 @@ const Films = props => {
       {props.films.map(film => {
         console.log(film)
         return (
-          <Film film={film}/>
+          <div className="filmCard-container">
+            <FilmCard film={film}/>
+          </div>
         )}
       )}
       {props.error && <p>{props.error}</p>}
