@@ -20,21 +20,19 @@ const FilmCard = ({ film }) => {
       <Row>
           {film.map(item => {
             return(  
-              // <div key={item.id} className="filmCard-container">
-                <Col xs="12" sm="6" md="4" xl="3">
-                  <Card className="card-details">
-                    <CardHeader>
-                      <h3>Film Title: {item.title}</h3>
-                    </CardHeader>   
-                    <CardBody>   
-                      <CardText>{item.description}</CardText>
-                      <CardSubtitle>Director: {item.director}</CardSubtitle>
-                      <CardSubtitle>Producer: {item.producer}</CardSubtitle>
-                      <Badge color="info">Release Date: {item.release_date}</Badge>
-                    </CardBody>
-                  </Card>
-                </Col>
-              // </div>
+              <Col xs="12" sm="6" md="4" xl="3">
+                <Card className="card-details">
+                  <CardHeader className="card-header">
+                    <h3> {item.title}</h3>
+                  </CardHeader>   
+                  <CardBody>   
+                    <CardText>{item.description}</CardText>
+                    <CardSubtitle>Director: {item.director}</CardSubtitle>
+                    <CardSubtitle>Producer: {item.producer}</CardSubtitle>
+                    <Badge color="info">Release Date: {item.release_date}</Badge>
+                  </CardBody>
+                </Card>
+              </Col>
             )
           })}
       </Row>

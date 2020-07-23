@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner'; 
-import { Container, Row } from "reactstrap";
 
 import { fetchFilm } from '../store/actions/filmActions'; 
 import FilmCard from './FilmCard.js'; 
