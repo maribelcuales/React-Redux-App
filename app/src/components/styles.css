@@ -1,0 +1,10 @@
+.filmCard-container {
+  background-color: yellow;
+  margin-top: 20px; 
+  display: flex;
+  align-content: space-between;
+}
+
+.card-details {
+  margin-top: 30px; 
+}
