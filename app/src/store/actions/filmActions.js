@@ -8,14 +8,15 @@ export const fetchFilm = () => {
     axios
       .get('https://ghibliapi.herokuapp.com/films')
       .then(res => {
-        // console.log(res); // response.data
+        console.log(res); // response.data
         dispatch({ type: 'FETCH_FILM_SUCCESS', payload: res.data })
       })
       .catch(error => {
         // console.log(error); 
         dispatch({
           type: 'FETCH_FILM_FAILURE',
-          payload: `Error ${error.response.status}: ${error.response.data}`
+          payload: `Error ${error.response}`
+          // payload: `Error ${error.response.status}: ${error.response.data}`
         });
       });
   };
