@@ -3,11 +3,14 @@ import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner'; 
 
 import { fetchFilm } from '../store/actions/filmActions'; 
+import Film from './Film.js'; 
 
 const Films = props => {
   useEffect(() => {
     props.fetchFilm();
   }, []);
+  console.log("props", props.films)
+
   return (
     <div>
       <h2>Films</h2>
@@ -19,6 +22,13 @@ const Films = props => {
         width={100}
         />
       )}
+      {props.films.map(film => {
+        console.log(film)
+        return (
+          <Film film={film}/>
+        )}
+      )}
+      {props.error && <p>{props.error}</p>}
     </div>
   );
 };
