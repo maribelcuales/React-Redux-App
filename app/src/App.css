@@ -1,3 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700i|Source+Sans+Pro&display=swap");
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  overflow-x: hidden;
+  background-color: #56a9ad;
+  background-image: url("http://studioghiblimovies.com/wp-content/uploads/2016/04/46393_1_other_anime_studio_ghibli.jpg");
+  background-size: stretch;
+  background-repeat: repeat;
+  padding: 0;
+  margin: 0;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 250px;
+  margin-top: 30px;
+}
+
+h1 {
+  color: black;
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+  margin-top: 50px;
+}
+
 .App {
   text-align: center;
 }
