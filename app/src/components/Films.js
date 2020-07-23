@@ -30,7 +30,7 @@ const Films = props => {
           </div>
         )}
       )}
-      {props.error && <p>{props.error}</p>}
+      {props.error && <p className="error">"{props.error}"</p>}
     </div>
   );
 };
