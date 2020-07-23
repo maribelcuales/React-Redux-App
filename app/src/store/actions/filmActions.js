@@ -12,10 +12,10 @@ export const fetchFilm = () => {
         dispatch({ type: 'FETCH_FILM_SUCCESS', payload: res.data })
       })
       .catch(error => {
-        // console.log(error); 
+        console.log("get error", error); 
         dispatch({
           type: 'FETCH_FILM_FAILURE',
-          payload: `Error ${error.response}`
+          payload: `${error}`
           // payload: `Error ${error.response.status}: ${error.response.data}`
         });
       });
